@@ -30,3 +30,11 @@ is used here only to identify the machine the timer is designed for.
 ## License
 
 MIT
+
+## Crédits / Credits
+
+© 2026 Pierre Gallaz. Développé avec [Claude Code](https://claude.com/claude-code) (Anthropic).
+Licence MIT, voir `LICENSE`.
+
+© 2026 Pierre Gallaz. Developed with [Claude Code](https://claude.com/claude-code) (Anthropic).
+MIT licence, see `LICENSE`.

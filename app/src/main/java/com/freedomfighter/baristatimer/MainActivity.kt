@@ -25,6 +25,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.material3.Text
@@ -43,6 +44,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -142,6 +144,13 @@ private fun TimerScreen() {
             Phase.HEATING -> HeatingContent(now - heatingStart)
             Phase.EXTRACTING -> ExtractingContent(now - extractionStart)
             Phase.DONE -> DoneContent(heatingMs, extractionMs)
+        }
+        if (phase == Phase.IDLE) {
+            Text(
+                stringResource(R.string.credits),
+                color = Dim, fontSize = 11.sp, letterSpacing = 1.sp,
+                modifier = Modifier.align(Alignment.BottomCenter).padding(bottom = 24.dp)
+            )
         }
     }
 }
