@@ -2,16 +2,18 @@
 
 # Timer for 9Barista
 
-A minimal espresso timer for the 9Barista stovetop espresso machine.
-Three taps per brew, nothing more.
+An espresso timer for the 9Barista stovetop machine, three taps per brew: when it
+goes on the stove, when coffee appears, when done. Heating time, then extraction
+with the 25–30 s zone marked, then grind advice. No network, no ads, no account.
 
-1. Tap to start heating — counts up, warns at 8 minutes
-2. Tap when espresso appears — extraction timer with a progress ring,
-   green in the 25–30 s target zone
-3. Tap when done — results and grind adjustment advice
+## Key points
 
-Haptic feedback at 25 s, 30 s and 8 min. Screen stays on while brewing.
-No ads, no tracking, no accounts. Only permission: vibration.
+- First tap starts the heating count; it warns at 8 minutes.
+- Second tap starts the extraction timer: a progress ring, green between 25 and 30 s.
+- Third tap shows both times and the verdict: grind finer under 25 s, coarser over
+  30 s, otherwise perfect.
+- Vibrates at 25 s, 30 s and 8 min. The screen stays on while brewing.
+- Nothing is stored, no brew history. Only permission: vibration.
 
 ## Install
 
@@ -19,9 +21,12 @@ No ads, no tracking, no accounts. Only permission: vibration.
   and search for "Timer for 9Barista"
 - **APK:** grab the latest from the
   [repo listing](https://funkypitt.github.io/fdroid-repo/repo/)
-- **Build:** `ANDROID_HOME=<sdk> ./gradlew assembleRelease`
 
 Requires Android 8.0+.
+
+## Build
+
+`ANDROID_HOME=<sdk> ./gradlew assembleRelease`
 
 ## Disclaimer
 
