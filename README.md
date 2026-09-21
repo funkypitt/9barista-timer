@@ -26,11 +26,6 @@ with the 25–30 s zone marked, then grind advice. No network, no ads, no accoun
 
 All three deliver the same file, with the same signature.
 
-- **F-Droid:** add the repo `https://funkypitt.github.io/fdroid-repo/repo`
-  and search for "Timer for 9Barista"
-- **APK:** grab the latest from the
-  [repo listing](https://funkypitt.github.io/fdroid-repo/repo/)
-
 Requires Android 8.0+.
 
 ## Build
