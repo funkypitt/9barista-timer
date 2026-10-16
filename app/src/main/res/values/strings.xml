@@ -2,4 +2,34 @@
 <resources>
     <string name="app_name">Timer for 9Barista</string>
     <string name="credits">Pierre Gallaz · developed with Claude Code</string>
+    <string name="espresso_timer">ESPRESSO TIMER</string>
+    <string name="tap_to_start">TAP TO START</string>
+    <string name="heating">HEATING</string>
+    <string name="remove_from_heat">REMOVE FROM HEAT</string>
+    <string name="heating_typical">3–6 min typical</string>
+    <string name="tap_when_appears">TAP WHEN ESPRESSO APPEARS</string>
+    <string name="extracting">EXTRACTING</string>
+    <string name="target_time">TARGET  25–30s</string>
+    <string name="tap_when_done">TAP WHEN DONE</string>
+    <string name="done">DONE</string>
+    <string name="extraction">EXTRACTION</string>
+    <string name="grind_finer">GRIND FINER</string>
+    <string name="grind_coarser">GRIND COARSER</string>
+    <string name="perfect">PERFECT</string>
+    <string name="target_weight">TARGET  35–40g</string>
+    <string name="tap_to_reset">TAP TO RESET</string>
+    <string name="care_line">care and maintenance</string>
+    <string name="care_title">CARE AND MAINTENANCE</string>
+    <string name="tap_to_go_back">TAP TO GO BACK</string>
+    <string name="care_source">from the 9Barista guides · unofficial app</string>
+    <string name="care_when_1">AFTER EACH BREW</string>
+    <string name="care_what_1">Let it cool, pull the tab of the safety valve until it hisses, then unscrew: this spares the boiler o-ring. Rinse every part and let them dry.</string>
+    <string name="care_when_2">EVERY BREW</string>
+    <string name="care_what_2">Filtered water, filled to the line. Never more than 8 minutes on the heat, and off the heat as soon as the espresso is out. Let the heat plate cool by itself.</string>
+    <string name="care_when_3">WHEN LIMESCALE SHOWS</string>
+    <string name="care_what_3">A light descale: a sulfamic-acid descaler, cold, 15 minutes in the boiler. At most once a month; if it needs more, soften your water. Never lactic acid, it damages the plating.</string>
+    <string name="care_when_4">ONCE A YEAR</string>
+    <string name="care_what_4">A deep descale, with the heat exchanger submerged too — every six months where the water is hard.</string>
+    <string name="care_when_5">NOW AND THEN</string>
+    <string name="care_what_5">With the machine apart, look at the o-rings, the valve pin and its spring: scale, grit, wear. A damaged o-ring is replaced — a spare came in the brown envelope.</string>
 </resources>

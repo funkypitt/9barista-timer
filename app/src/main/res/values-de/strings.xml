@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="espresso_timer">ESPRESSO-TIMER</string>
+    <string name="tap_to_start">TIPPEN ZUM STARTEN</string>
+    <string name="heating">AUFHEIZEN</string>
+    <string name="remove_from_heat">VOM HERD NEHMEN</string>
+    <string name="heating_typical">meist 3–6 min</string>
+    <string name="tap_when_appears">TIPPEN, WENN ESPRESSO ERSCHEINT</string>
+    <string name="extracting">EXTRAKTION</string>
+    <string name="target_time">ZIEL  25–30 s</string>
+    <string name="tap_when_done">TIPPEN, WENN FERTIG</string>
+    <string name="done">FERTIG</string>
+    <string name="extraction">EXTRAKTION</string>
+    <string name="grind_finer">FEINER MAHLEN</string>
+    <string name="grind_coarser">GRÖBER MAHLEN</string>
+    <string name="perfect">PERFEKT</string>
+    <string name="target_weight">ZIEL  35–40 g</string>
+    <string name="tap_to_reset">TIPPEN FÜR NEUSTART</string>
+    <string name="care_line">Pflege und Wartung</string>
+    <string name="care_title">PFLEGE UND WARTUNG</string>
+    <string name="tap_to_go_back">TIPPEN ZUM ZURÜCKGEHEN</string>
+    <string name="care_source">nach den 9Barista-Anleitungen · inoffizielle App</string>
+    <string name="care_when_1">NACH JEDEM BEZUG</string>
+    <string name="care_what_1">Abkühlen lassen, die Lasche des Sicherheitsventils ziehen, bis es zischt, dann aufschrauben: das schont den O-Ring des Kessels. Alle Teile spülen und trocknen lassen.</string>
+    <string name="care_when_2">BEI JEDEM BEZUG</string>
+    <string name="care_what_2">Gefiltertes Wasser, bis zur Markierung. Nie länger als 8 Minuten auf dem Herd, und vom Herd, sobald der Espresso draußen ist. Die Heizplatte von selbst abkühlen lassen.</string>
+    <string name="care_when_3">WENN KALK SICHTBAR WIRD</string>
+    <string name="care_what_3">Leicht entkalken: ein Entkalker auf Sulfaminsäure-Basis, kalt, 15 Minuten im Kessel. Höchstens einmal im Monat; braucht es mehr, das Wasser enthärten. Nie Milchsäure, sie beschädigt die Beschichtung.</string>
+    <string name="care_when_4">EINMAL IM JAHR</string>
+    <string name="care_what_4">Gründlich entkalken, auch den Wärmetauscher eingetaucht — alle sechs Monate bei hartem Wasser.</string>
+    <string name="care_when_5">HIN UND WIEDER</string>
+    <string name="care_what_5">Bei zerlegter Maschine O-Ringe, Ventilstift und Feder ansehen: Kalk, Körnchen, Verschleiß. Ein beschädigter O-Ring wird ersetzt — ein Ersatz lag im braunen Umschlag.</string>
+</resources>

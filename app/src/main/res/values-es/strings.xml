@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="espresso_timer">TEMPORIZADOR DE ESPRESSO</string>
+    <string name="tap_to_start">TOCA PARA EMPEZAR</string>
+    <string name="heating">CALENTANDO</string>
+    <string name="remove_from_heat">RETIRA DEL FUEGO</string>
+    <string name="heating_typical">3–6 min normalmente</string>
+    <string name="tap_when_appears">TOCA CUANDO SALGA EL ESPRESSO</string>
+    <string name="extracting">EXTRAYENDO</string>
+    <string name="target_time">OBJETIVO  25–30 s</string>
+    <string name="tap_when_done">TOCA AL TERMINAR</string>
+    <string name="done">LISTO</string>
+    <string name="extraction">EXTRACCIÓN</string>
+    <string name="grind_finer">MUELE MÁS FINO</string>
+    <string name="grind_coarser">MUELE MÁS GRUESO</string>
+    <string name="perfect">PERFECTO</string>
+    <string name="target_weight">OBJETIVO  35–40 g</string>
+    <string name="tap_to_reset">TOCA PARA REINICIAR</string>
+    <string name="care_line">cuidado y mantenimiento</string>
+    <string name="care_title">CUIDADO Y MANTENIMIENTO</string>
+    <string name="tap_to_go_back">TOCA PARA VOLVER</string>
+    <string name="care_source">según las guías de 9Barista · app no oficial</string>
+    <string name="care_when_1">DESPUÉS DE CADA CAFÉ</string>
+    <string name="care_what_1">Deja enfriar, tira de la lengüeta de la válvula de seguridad hasta oír el silbido y luego desenrosca: así se protege la junta tórica de la caldera. Enjuaga todas las piezas y déjalas secar.</string>
+    <string name="care_when_2">EN CADA CAFÉ</string>
+    <string name="care_what_2">Agua filtrada, hasta la marca. Nunca más de 8 minutos al fuego, y fuera del fuego en cuanto salga el espresso. Deja que la placa se enfríe sola.</string>
+    <string name="care_when_3">CUANDO SE VEA CAL</string>
+    <string name="care_what_3">Una descalcificación ligera: un descalcificador de ácido sulfámico, en frío, 15 minutos en la caldera. Como mucho una vez al mes; si hace falta más, ablanda el agua. Nunca ácido láctico, daña el recubrimiento.</string>
+    <string name="care_when_4">UNA VEZ AL AÑO</string>
+    <string name="care_what_4">Una descalcificación a fondo, con el intercambiador de calor también sumergido — cada seis meses donde el agua sea dura.</string>
+    <string name="care_when_5">DE VEZ EN CUANDO</string>
+    <string name="care_what_5">Con la máquina desmontada, mira las juntas tóricas, el vástago de la válvula y su muelle: cal, arenilla, desgaste. Una junta dañada se cambia — venía una de repuesto en el sobre marrón.</string>
+</resources>

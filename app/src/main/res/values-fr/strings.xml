@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="espresso_timer">MINUTEUR ESPRESSO</string>
+    <string name="tap_to_start">TOUCHEZ POUR COMMENCER</string>
+    <string name="heating">CHAUFFE</string>
+    <string name="remove_from_heat">RETIREZ DU FEU</string>
+    <string name="heating_typical">3–6 min en général</string>
+    <string name="tap_when_appears">TOUCHEZ QUAND L\'ESPRESSO APPARAÎT</string>
+    <string name="extracting">EXTRACTION</string>
+    <string name="target_time">CIBLE  25–30 s</string>
+    <string name="tap_when_done">TOUCHEZ QUAND C\'EST FINI</string>
+    <string name="done">TERMINÉ</string>
+    <string name="extraction">EXTRACTION</string>
+    <string name="grind_finer">MOUTURE PLUS FINE</string>
+    <string name="grind_coarser">MOUTURE PLUS GROSSE</string>
+    <string name="perfect">PARFAIT</string>
+    <string name="target_weight">CIBLE  35–40 g</string>
+    <string name="tap_to_reset">TOUCHEZ POUR RECOMMENCER</string>
+    <string name="care_line">entretien et soin</string>
+    <string name="care_title">ENTRETIEN ET SOIN</string>
+    <string name="tap_to_go_back">TOUCHEZ POUR REVENIR</string>
+    <string name="care_source">d\'après les guides 9Barista · application non officielle</string>
+    <string name="care_when_1">APRÈS CHAQUE CAFÉ</string>
+    <string name="care_what_1">Laissez refroidir, tirez la languette de la soupape jusqu\'au sifflement, puis dévissez : cela ménage le joint de la chaudière. Rincez toutes les pièces et laissez-les sécher.</string>
+    <string name="care_when_2">À CHAQUE CAFÉ</string>
+    <string name="care_what_2">De l\'eau filtrée, jusqu\'au trait. Jamais plus de 8 minutes sur le feu, et hors du feu dès que l\'espresso est sorti. Laissez la plaque refroidir d\'elle-même.</string>
+    <string name="care_when_3">QUAND LE CALCAIRE SE VOIT</string>
+    <string name="care_what_3">Un détartrage léger : un détartrant à l\'acide sulfamique, à froid, 15 minutes dans la chaudière. Au plus une fois par mois ; s\'il en faut davantage, adoucissez votre eau. Jamais d\'acide lactique, il abîme le placage.</string>
+    <string name="care_when_4">UNE FOIS PAR AN</string>
+    <string name="care_what_4">Un détartrage complet, l\'échangeur de chaleur immergé lui aussi — tous les six mois si l\'eau est dure.</string>
+    <string name="care_when_5">DE TEMPS EN TEMPS</string>
+    <string name="care_what_5">Machine démontée, regardez les joints toriques, la tige de la soupape et son ressort : calcaire, grains, usure. Un joint abîmé se remplace — il y en a un de rechange dans l\'enveloppe brune.</string>
+</resources>

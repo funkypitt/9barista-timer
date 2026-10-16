@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="espresso_timer">TEMPORIZADOR DE ESPRESSO</string>
+    <string name="tap_to_start">TOQUE PARA COMEÇAR</string>
+    <string name="heating">A AQUECER</string>
+    <string name="remove_from_heat">RETIRE DO LUME</string>
+    <string name="heating_typical">3–6 min normalmente</string>
+    <string name="tap_when_appears">TOQUE QUANDO O ESPRESSO APARECER</string>
+    <string name="extracting">A EXTRAIR</string>
+    <string name="target_time">ALVO  25–30 s</string>
+    <string name="tap_when_done">TOQUE QUANDO TERMINAR</string>
+    <string name="done">PRONTO</string>
+    <string name="extraction">EXTRAÇÃO</string>
+    <string name="grind_finer">MOAGEM MAIS FINA</string>
+    <string name="grind_coarser">MOAGEM MAIS GROSSA</string>
+    <string name="perfect">PERFEITO</string>
+    <string name="target_weight">ALVO  35–40 g</string>
+    <string name="tap_to_reset">TOQUE PARA RECOMEÇAR</string>
+    <string name="care_line">cuidado e manutenção</string>
+    <string name="care_title">CUIDADO E MANUTENÇÃO</string>
+    <string name="tap_to_go_back">TOQUE PARA VOLTAR</string>
+    <string name="care_source">segundo os guias da 9Barista · app não oficial</string>
+    <string name="care_when_1">DEPOIS DE CADA CAFÉ</string>
+    <string name="care_what_1">Deixe arrefecer, puxe a patilha da válvula de segurança até ouvir o silvo e depois desenrosque: isso poupa o O-ring da caldeira. Enxague todas as peças e deixe-as secar.</string>
+    <string name="care_when_2">EM CADA CAFÉ</string>
+    <string name="care_what_2">Água filtrada, até à marca. Nunca mais de 8 minutos ao lume, e fora do lume assim que o espresso sair. Deixe a placa arrefecer sozinha.</string>
+    <string name="care_when_3">QUANDO O CALCÁRIO SE VIR</string>
+    <string name="care_what_3">Uma descalcificação ligeira: um descalcificante de ácido sulfâmico, a frio, 15 minutos na caldeira. No máximo uma vez por mês; se precisar de mais, amacie a água. Nunca ácido láctico, danifica o revestimento.</string>
+    <string name="care_when_4">UMA VEZ POR ANO</string>
+    <string name="care_what_4">Uma descalcificação profunda, com o permutador de calor também submerso — de seis em seis meses onde a água for dura.</string>
+    <string name="care_when_5">DE VEZ EM QUANDO</string>
+    <string name="care_what_5">Com a máquina desmontada, veja os O-rings, o pino da válvula e a sua mola: calcário, grãos, desgaste. Um O-ring danificado substitui-se — veio um sobresselente no envelope castanho.</string>
+</resources>

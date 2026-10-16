@@ -14,6 +14,9 @@ with the 25–30 s zone marked, then grind advice. No network, no ads, no accoun
   30 s, otherwise perfect.
 - Vibrates at 25 s, 30 s and 8 min. The screen stays on while brewing.
 - Nothing is stored, no brew history. Only permission: vibration.
+- After the brew, one quiet line, "care and maintenance", opens the brewer's care: what to do
+  after each brew, when and how to descale, what to check — taken from 9Barista's own guides.
+- English, French, German, Spanish, Portuguese, Russian.
 
 ## Install
 

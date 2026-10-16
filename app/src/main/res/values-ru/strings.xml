@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="espresso_timer">ТАЙМЕР ЭСПРЕССО</string>
+    <string name="tap_to_start">КОСНИТЕСЬ, ЧТОБЫ НАЧАТЬ</string>
+    <string name="heating">НАГРЕВ</string>
+    <string name="remove_from_heat">СНИМИТЕ С ОГНЯ</string>
+    <string name="heating_typical">обычно 3–6 мин</string>
+    <string name="tap_when_appears">КОСНИТЕСЬ, КОГДА ПОЯВИТСЯ ЭСПРЕССО</string>
+    <string name="extracting">ЭКСТРАКЦИЯ</string>
+    <string name="target_time">ЦЕЛЬ  25–30 с</string>
+    <string name="tap_when_done">КОСНИТЕСЬ, КОГДА ГОТОВО</string>
+    <string name="done">ГОТОВО</string>
+    <string name="extraction">ЭКСТРАКЦИЯ</string>
+    <string name="grind_finer">ПОМОЛ МЕЛЬЧЕ</string>
+    <string name="grind_coarser">ПОМОЛ КРУПНЕЕ</string>
+    <string name="perfect">ИДЕАЛЬНО</string>
+    <string name="target_weight">ЦЕЛЬ  35–40 г</string>
+    <string name="tap_to_reset">КОСНИТЕСЬ, ЧТОБЫ СБРОСИТЬ</string>
+    <string name="care_line">уход и обслуживание</string>
+    <string name="care_title">УХОД И ОБСЛУЖИВАНИЕ</string>
+    <string name="tap_to_go_back">КОСНИТЕСЬ, ЧТОБЫ ВЕРНУТЬСЯ</string>
+    <string name="care_source">по руководствам 9Barista · неофициальное приложение</string>
+    <string name="care_when_1">ПОСЛЕ КАЖДОЙ ВАРКИ</string>
+    <string name="care_what_1">Дайте остыть, потяните язычок предохранительного клапана до шипения, затем отвинтите: это бережёт уплотнительное кольцо бойлера. Промойте все детали и дайте им высохнуть.</string>
+    <string name="care_when_2">ПРИ КАЖДОЙ ВАРКЕ</string>
+    <string name="care_what_2">Фильтрованная вода, до отметки. Не дольше 8 минут на огне, и с огня, как только эспрессо вышел. Пластине дайте остыть самой.</string>
+    <string name="care_when_3">КОГДА ВИДНА НАКИПЬ</string>
+    <string name="care_what_3">Лёгкая очистка от накипи: средство на сульфаминовой кислоте, холодное, 15 минут в бойлере. Не чаще раза в месяц; если нужно чаще, смягчайте воду. Никакой молочной кислоты: она портит покрытие.</string>
+    <string name="care_when_4">РАЗ В ГОД</string>
+    <string name="care_what_4">Глубокая очистка от накипи, с погружением и теплообменника — раз в полгода там, где вода жёсткая.</string>
+    <string name="care_when_5">ВРЕМЯ ОТ ВРЕМЕНИ</string>
+    <string name="care_what_5">Разобрав машину, осмотрите уплотнительные кольца, штифт клапана и его пружину: накипь, крупинки, износ. Повреждённое кольцо заменяют — запасное лежало в коричневом конверте.</string>
+</resources>

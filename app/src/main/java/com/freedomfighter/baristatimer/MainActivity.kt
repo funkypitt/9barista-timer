@@ -25,7 +25,10 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.material3.Text
@@ -46,6 +49,7 @@ import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.delay
@@ -81,7 +85,11 @@ private fun TimerScreen() {
     val context = LocalContext.current
     val vibrator = remember { context.getSystemService(Vibrator::class.java) }
 
-    BackHandler(enabled = phase != Phase.IDLE) { phase = Phase.IDLE }
+    // the brewer's care, one quiet line after the brew, a page when it is tapped
+    var care by remember { mutableStateOf(false) }
+
+    BackHandler(enabled = care) { care = false }
+    BackHandler(enabled = !care && phase != Phase.IDLE) { phase = Phase.IDLE }
 
     LaunchedEffect(phase) {
         if (phase != Phase.HEATING && phase != Phase.EXTRACTING) return@LaunchedEffect
@@ -113,7 +121,8 @@ private fun TimerScreen() {
 
     val onTap: () -> Unit = {
         val t = SystemClock.elapsedRealtime()
-        when (phase) {
+        if (care) care = false
+        else when (phase) {
             Phase.IDLE -> { heatingStart = t; now = t; phase = Phase.HEATING }
             Phase.HEATING -> { heatingMs = t - heatingStart; extractionStart = t; now = t; phase = Phase.EXTRACTING }
             Phase.EXTRACTING -> { extractionMs = t - extractionStart; now = t; phase = Phase.DONE }
@@ -139,13 +148,14 @@ private fun TimerScreen() {
             .systemBarsPadding(),
         contentAlignment = Alignment.Center
     ) {
-        when (phase) {
+        if (care) CareContent()
+        else when (phase) {
             Phase.IDLE -> IdleContent()
             Phase.HEATING -> HeatingContent(now - heatingStart)
             Phase.EXTRACTING -> ExtractingContent(now - extractionStart)
-            Phase.DONE -> DoneContent(heatingMs, extractionMs)
+            Phase.DONE -> DoneContent(heatingMs, extractionMs) { care = true }
         }
-        if (phase == Phase.IDLE) {
+        if (phase == Phase.IDLE && !care) {
             Text(
                 stringResource(R.string.credits),
                 color = Dim, fontSize = 11.sp, letterSpacing = 1.sp,
@@ -171,9 +181,9 @@ private fun IdleContent() {
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
         Text("9BARISTA", color = Copper, fontSize = 32.sp, fontWeight = FontWeight.Bold, letterSpacing = 8.sp)
         Spacer(Modifier.height(8.dp))
-        Text("ESPRESSO TIMER", color = Dim, fontSize = 14.sp, letterSpacing = 4.sp)
+        Text(stringResource(R.string.espresso_timer), color = Dim, fontSize = 14.sp, letterSpacing = 4.sp)
         Spacer(Modifier.height(64.dp))
-        PulsingHint("TAP TO START")
+        PulsingHint(stringResource(R.string.tap_to_start))
     }
 }
 
@@ -188,7 +198,7 @@ private fun HeatingContent(elapsedMs: Long) {
         modifier = Modifier.fillMaxSize()
     ) {
         Spacer(Modifier.weight(1f))
-        Text("HEATING", color = Copper, fontSize = 16.sp, fontWeight = FontWeight.Medium, letterSpacing = 6.sp)
+        Text(stringResource(R.string.heating), color = Copper, fontSize = 16.sp, fontWeight = FontWeight.Medium, letterSpacing = 6.sp)
         Spacer(Modifier.height(48.dp))
         Text(
             "%d:%02d".format(total / 60, total % 60),
@@ -198,13 +208,13 @@ private fun HeatingContent(elapsedMs: Long) {
         )
         Spacer(Modifier.height(16.dp))
         Text(
-            if (over) "REMOVE FROM HEAT" else "3–6 min typical",
+            if (over) stringResource(R.string.remove_from_heat) else stringResource(R.string.heating_typical),
             color = if (over) Red else Dim,
             fontSize = 14.sp,
             letterSpacing = 2.sp
         )
         Spacer(Modifier.weight(1f))
-        PulsingHint("TAP WHEN ESPRESSO APPEARS")
+        PulsingHint(stringResource(R.string.tap_when_appears))
         Spacer(Modifier.height(32.dp))
     }
 }
@@ -224,16 +234,16 @@ private fun ExtractingContent(elapsedMs: Long) {
         modifier = Modifier.fillMaxSize()
     ) {
         Spacer(Modifier.weight(1f))
-        Text("EXTRACTING", color = Copper, fontSize = 16.sp, fontWeight = FontWeight.Medium, letterSpacing = 6.sp)
+        Text(stringResource(R.string.extracting), color = Copper, fontSize = 16.sp, fontWeight = FontWeight.Medium, letterSpacing = 6.sp)
         Spacer(Modifier.height(32.dp))
         Box(contentAlignment = Alignment.Center) {
             ExtractionRing(seconds, Modifier.size(240.dp))
             Text("%.1f".format(seconds), color = timerColor, fontSize = 64.sp, fontWeight = FontWeight.Light)
         }
         Spacer(Modifier.height(16.dp))
-        Text("TARGET  25–30s", color = Dim, fontSize = 14.sp, letterSpacing = 2.sp)
+        Text(stringResource(R.string.target_time), color = Dim, fontSize = 14.sp, letterSpacing = 2.sp)
         Spacer(Modifier.weight(1f))
-        PulsingHint("TAP WHEN DONE")
+        PulsingHint(stringResource(R.string.tap_when_done))
         Spacer(Modifier.height(32.dp))
     }
 }
@@ -271,15 +281,15 @@ private fun ExtractionRing(elapsedSeconds: Float, modifier: Modifier = Modifier)
 }
 
 @Composable
-private fun DoneContent(heatingMs: Long, extractionMs: Long) {
+private fun DoneContent(heatingMs: Long, extractionMs: Long, onCare: () -> Unit) {
     val heatSec = (heatingMs / 1000).toInt()
     val extSec = extractionMs / 1000f
     val extColor = if (extSec in 25f..30f) Green else Red
-    val verdict = when {
-        extSec < 25f -> "GRIND FINER"
-        extSec > 30f -> "GRIND COARSER"
-        else -> "PERFECT"
-    }
+    val verdict = stringResource(when {
+        extSec < 25f -> R.string.grind_finer
+        extSec > 30f -> R.string.grind_coarser
+        else -> R.string.perfect
+    })
 
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -287,26 +297,67 @@ private fun DoneContent(heatingMs: Long, extractionMs: Long) {
         modifier = Modifier.fillMaxSize()
     ) {
         Spacer(Modifier.weight(1f))
-        Text("DONE", color = Copper, fontSize = 16.sp, fontWeight = FontWeight.Medium, letterSpacing = 6.sp)
+        Text(stringResource(R.string.done), color = Copper, fontSize = 16.sp, fontWeight = FontWeight.Medium, letterSpacing = 6.sp)
         Spacer(Modifier.height(48.dp))
 
-        Text("HEATING", color = Dim, fontSize = 12.sp, letterSpacing = 3.sp)
+        Text(stringResource(R.string.heating), color = Dim, fontSize = 12.sp, letterSpacing = 3.sp)
         Spacer(Modifier.height(4.dp))
         Text("%d:%02d".format(heatSec / 60, heatSec % 60), color = WarmWhite, fontSize = 36.sp, fontWeight = FontWeight.Light)
 
         Spacer(Modifier.height(32.dp))
 
-        Text("EXTRACTION", color = Dim, fontSize = 12.sp, letterSpacing = 3.sp)
+        Text(stringResource(R.string.extraction), color = Dim, fontSize = 12.sp, letterSpacing = 3.sp)
         Spacer(Modifier.height(4.dp))
         Text("%.1fs".format(extSec), color = extColor, fontSize = 48.sp, fontWeight = FontWeight.Light)
         Spacer(Modifier.height(12.dp))
         Text(verdict, color = extColor, fontSize = 14.sp, fontWeight = FontWeight.Medium, letterSpacing = 3.sp)
 
         Spacer(Modifier.height(24.dp))
-        Text("TARGET  35–40g", color = Dim, fontSize = 12.sp, letterSpacing = 2.sp)
+        Text(stringResource(R.string.target_weight), color = Dim, fontSize = 12.sp, letterSpacing = 2.sp)
 
         Spacer(Modifier.weight(1f))
-        PulsingHint("TAP TO RESET")
+        // one quiet line, dimmer than the rest: the brewer's care is a tap away, never in the way
+        Text(
+            stringResource(R.string.care_line),
+            color = Dim.copy(alpha = 0.7f),
+            fontSize = 13.sp,
+            letterSpacing = 1.sp,
+            modifier = Modifier
+                .clickable(interactionSource = remember { MutableInteractionSource() }, indication = null, onClick = onCare)
+                .padding(horizontal = 24.dp, vertical = 12.dp)
+        )
+        Spacer(Modifier.height(8.dp))
+        PulsingHint(stringResource(R.string.tap_to_reset))
+        Spacer(Modifier.height(32.dp))
+    }
+}
+
+/** The brewer's care, from 9Barista's own guides: when, and what. Scrolls when the screen is small; a tap anywhere goes back. */
+@Composable
+private fun CareContent() {
+    val items = listOf(
+        R.string.care_when_1 to R.string.care_what_1,
+        R.string.care_when_2 to R.string.care_what_2,
+        R.string.care_when_3 to R.string.care_what_3,
+        R.string.care_when_4 to R.string.care_what_4,
+        R.string.care_when_5 to R.string.care_what_5
+    )
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(horizontal = 32.dp)
+    ) {
+        Spacer(Modifier.height(48.dp))
+        Text(stringResource(R.string.care_title), color = Copper, fontSize = 14.sp, fontWeight = FontWeight.Medium, letterSpacing = 4.sp, textAlign = TextAlign.Center)
+        Spacer(Modifier.height(36.dp))
+        items.forEach { (whenRes, whatRes) ->
+            Text(stringResource(whenRes), color = Dim, fontSize = 12.sp, letterSpacing = 3.sp, textAlign = TextAlign.Center, modifier = Modifier.fillMaxWidth())
+            Spacer(Modifier.height(6.dp))
+            Text(stringResource(whatRes), color = WarmWhite, fontSize = 15.sp, fontWeight = FontWeight.Light, lineHeight = 22.sp, textAlign = TextAlign.Center, modifier = Modifier.fillMaxWidth())
+            Spacer(Modifier.height(26.dp))
+        }
+        Text(stringResource(R.string.care_source), color = Dim.copy(alpha = 0.7f), fontSize = 11.sp, letterSpacing = 1.sp, textAlign = TextAlign.Center)
+        Spacer(Modifier.height(36.dp))
+        PulsingHint(stringResource(R.string.tap_to_go_back))
         Spacer(Modifier.height(32.dp))
     }
 }
