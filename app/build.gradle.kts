@@ -11,9 +11,9 @@ android {
     defaultConfig {
         applicationId = "com.freedomfighter.baristatimer"
         minSdk = 26
-        targetSdk = 34
-        versionCode = 5
-        versionName = "1.2.0"
+        targetSdk = 36
+        versionCode = 6
+        versionName = "1.3.0"
     }
 
     buildTypes {
