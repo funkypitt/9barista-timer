@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="espresso_timer">ESPRESSO-TIMER</string>
+    <string name="for_machine">für die 9Barista · inoffizielle App</string>
     <string name="tap_to_start">TIPPEN ZUM STARTEN</string>
     <string name="heating">AUFHEIZEN</string>
     <string name="remove_from_heat">VOM HERD NEHMEN</string>

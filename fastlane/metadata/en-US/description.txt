@@ -1,0 +1,13 @@
+An unofficial, minimal espresso timer for the 9Barista stovetop espresso machine. Three taps per brew, nothing more.
+
+1. Tap to start heating: counts up, warns at 8 minutes.
+2. Tap when espresso appears: extraction timer with a progress ring, green in the 25–30 s target zone.
+3. Tap when done: both times and grind adjustment advice.
+
+A light tap of the phone at 25 s, 30 s and 8 min. The screen stays on while brewing. After the brew, one quiet line opens a short care and maintenance reminder.
+
+No ads, no tracking, no account, no connection. Nothing is stored.
+
+This is an unofficial, fan-made app. It is not affiliated with or endorsed by 9Barista Ltd. "9Barista" is a trademark of its owner and is used here only to identify the machine the timer is designed for.
+
+Pierre Gallaz · developed with Claude Code

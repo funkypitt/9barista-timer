@@ -181,9 +181,10 @@ private fun PulsingHint(text: String) {
 @Composable
 private fun IdleContent() {
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
-        Text("9BARISTA", color = Copper, fontSize = 32.sp, fontWeight = FontWeight.Bold, letterSpacing = 8.sp)
-        Spacer(Modifier.height(8.dp))
-        Text(stringResource(R.string.espresso_timer), color = Dim, fontSize = 14.sp, letterSpacing = 4.sp)
+        Text(stringResource(R.string.espresso_timer), color = Copper, fontSize = 22.sp, fontWeight = FontWeight.Bold, letterSpacing = 4.sp, textAlign = TextAlign.Center)
+        Spacer(Modifier.height(10.dp))
+        // the machine is named, and the app says at once that it is not the maker's
+        Text(stringResource(R.string.for_machine), color = Dim, fontSize = 13.sp, letterSpacing = 1.sp, textAlign = TextAlign.Center)
         Spacer(Modifier.height(64.dp))
         PulsingHint(stringResource(R.string.tap_to_start))
     }

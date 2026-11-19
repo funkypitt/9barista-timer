@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="espresso_timer">TEMPORIZADOR DE ESPRESSO</string>
+    <string name="for_machine">para la 9Barista · aplicación no oficial</string>
     <string name="tap_to_start">TOCA PARA EMPEZAR</string>
     <string name="heating">CALENTANDO</string>
     <string name="remove_from_heat">RETIRA DEL FUEGO</string>

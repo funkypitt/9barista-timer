@@ -1,0 +1,13 @@
+Un minuteur d'espresso minimaliste et non officiel pour la machine à espresso sur cuisinière 9Barista. Trois touches par café, rien de plus.
+
+1. Touchez pour lancer la chauffe : le temps s'écoule, alerte à 8 minutes.
+2. Touchez quand l'espresso apparaît : minuteur d'extraction avec anneau de progression, vert dans la zone cible 25–30 s.
+3. Touchez à la fin : les deux temps et un conseil de réglage de la mouture.
+
+Une légère vibration à 25 s, 30 s et 8 min. L'écran reste allumé pendant la préparation. Après le café, une ligne discrète ouvre un court rappel d'entretien.
+
+Sans publicité, sans pistage, sans compte, sans connexion. Rien n'est enregistré.
+
+Application non officielle, faite par un amateur. Elle n'est ni affiliée à ni approuvée par 9Barista Ltd. « 9Barista » est une marque de son propriétaire, utilisée ici uniquement pour identifier la machine à laquelle le minuteur est destiné.
+
+Pierre Gallaz · développé avec Claude Code

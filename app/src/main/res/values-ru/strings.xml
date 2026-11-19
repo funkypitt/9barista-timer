@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="espresso_timer">ТАЙМЕР ЭСПРЕССО</string>
+    <string name="for_machine">для 9Barista · неофициальное приложение</string>
     <string name="tap_to_start">КОСНИТЕСЬ, ЧТОБЫ НАЧАТЬ</string>
     <string name="heating">НАГРЕВ</string>
     <string name="remove_from_heat">СНИМИТЕ С ОГНЯ</string>

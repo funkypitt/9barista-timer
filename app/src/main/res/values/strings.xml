@@ -3,6 +3,7 @@
     <string name="app_name">Timer for 9Barista</string>
     <string name="credits">Pierre Gallaz · developed with Claude Code</string>
     <string name="espresso_timer">ESPRESSO TIMER</string>
+    <string name="for_machine">for the 9Barista · unofficial app</string>
     <string name="tap_to_start">TAP TO START</string>
     <string name="heating">HEATING</string>
     <string name="remove_from_heat">REMOVE FROM HEAT</string>
